@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+    <html lang="tr-TR" >
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no" />
+        <meta name="description" content="Nihat Aliyev Portfolio">
+        <meta name="keywords" content="nihatxp, Nihat Aliyev, Nihat, nihatlyv">
+        <meta name="author" content="Nihat Aliyev, nihatlyv@gmail.com">
+        <meta name='language' content='TR'>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
+
+        <!--=============== BOXICONS ===============-->
+        <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+        <!--=============== SWIPER CSS ===============-->
+        <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="./assets/css/style.css">
+
+        <!-- Chrome, Firefox OS and Opera -->
+        <meta name="theme-color" content="#0B111E">
+        <!-- Windows Phone -->
+        <meta name="msapplication-navbutton-color" content="#0B111E">
+        <!-- iOS Safari -->
+        <meta name="apple-mobile-web-app-status-bar-style" content="#0B111E">
+
+        <script type="text/javascript" src="http://code.jquery.com/jquery-latest.min.js"></script>
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <title>Nihat Aliyev</title>
+    </head>
+    <body id="body">
+        <input type="file" accept="audio/*" id="file-input" style="visibility:hidden">
+        <div class="music-player music-active-js">
+            <audio crossorigin="anonymous" id="myAudio" src="./assets/music/bgmusic.mpeg" data-path="./assets/music/bgmusic.mpeg"></audio>
+            
+          </div>
+          
+          <div class="song-selection">
+               <p class="song-select" data-author="Nihat" data-name="Music" data-path="assets/music/shape.mp3"></p>
+          </div>
+
+        <span id="cursor" style="display:none;">•</span>
+        <!--=============== HEADER ===============-->
+        <header class="header" id="header">
+            
+            <nav class="nav container">
+                    <button href="" class="nav__logo" id="cyan">Nihatxp</button>
+                    
+                    <div title="META:ALTKEY"  onclick="menuPress(event);">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 496.16 496.16" class="sihir dropbtn" >
+                            <path class="menuSvgBackground dropbtn" d="M496.16 248.09C496.16 111.06 385.09 0 248.08 0 111.07 0 0 111.06 0 248.1c0 137 111.07 248.06 248.08 248.06 137 0 248.08-111.06 248.08-248.06z"/>
+                            <path class="menuSvg dropbtn" fill="#fff" d="M392.58 226.08h-225.5a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h225.5a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10zm-265 0h-24a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h24a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10zm265-69h-225.5a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h225.5a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10zm-265 0h-24a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h24a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10zm265 138h-225.5a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h225.5a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10zm-265 0h-24a10 10 0 0 0-10 10v24a10 10 0 0 0 10 10h24a10 10 0 0 0 10-10v-24a10 10 0 0 0-10-10z"/>
+                        </svg>
+                    </div>
+                    <div id="myDropdown" class="dropdown-content">
+                        <button onclick="sesDosyasi()" id="sesDosyasibtn">Ses Dosyası Seçin</button>
+                        <button onclick="" id="" data-toggle-fullscreen>Full Ekran</button>
+                    </div>
+
+
+
+                    <div  id="sihir" onclick="sihirPress(event);" title="Tema'yı değiştir">
+                        <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 496.16 496.16" class="sihir">
+                            <path class="changeSvgBackground" d="M0 248.08C0 111.06 111.07 0 248.07 0 385.1 0 496.16 111.06 496.16 248.08c0 137-111.07 248.07-248.09 248.07C111.07 496.15 0 385.1 0 248.08z"/>
+                            <path class="changeSvg" d="m428.24 172.15-31.04.08c-23.27-52.18-68.95-89.87-126.65-98.91-64.28-10.07-125.81 19.78-162.5 72.3-16.3 23.33 22 45.17 38.16 22.04 50.32-72.04 157.76-65.53 201.9 4.69l-28.67.07a6.74 6.74 0 0 0-5.75 2.87 6.35 6.35 0 0 0-.64 8.19l54.61 84.74a7.44 7.44 0 0 0 12.7-.04l54.19-85.01c2.99-4.69-.95-11.03-6.3-11.02zm-77.89 155.07c-49.92 71.5-156.1 65.63-200.88-3.05l27.48-.06a6.74 6.74 0 0 0 5.74-2.87 6.35 6.35 0 0 0 .65-8.2l-54.61-84.74a7.43 7.43 0 0 0-12.7.05l-54.2 85c-2.98 4.7.96 11.04 6.32 11.03l32-.08c23.5 51.32 68.78 88.33 125.87 97.27 64.28 10.07 125.81-19.78 162.5-72.31 16.29-23.33-22.01-45.17-38.17-22.04z"/>
+                          </svg>
+                    </div>
+
+                    <div class="music-player-element icon-play-pause play">
+                        <div id="music" title="Müzik Çal">
+                            <svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" viewBox="0 0 496.16 496.16" class="sihir">
+                                <path class="soundSvg" d="M496.16 248.09C496.16 111.06 385.09 0 248.08 0 111.07 0 0 111.06 0 248.1c0 137 111.07 248.06 248.08 248.06 137.01 0 248.08-111.06 248.08-248.06z"/>
+                                <path fill="#dff2f4" class="soundWaveAlt" d="M73.41 251.07a6 6 0 0 1-6 6H56.75a6 6 0 0 1-6-6v-6.5a6 6 0 0 1 6-6H67.4a6 6 0 0 1 6 6v6.5zm31 15.75a6 6 0 0 1-6 6H87.75a6 6 0 0 1-6-6v-37.5a6 6 0 0 1 6-6H98.4a6 6 0 0 1 6 6v37.5z"/>
+                                <path fill="#b5e3ea" class="soundWaveAlt" d="M135.41 274.58a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-53a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v53zm31 15.5a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-84a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v84z"/>
+                                <path fill="#a3d5e0" class="soundWave" d="M197.41 321.08a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-146a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v146zm31 15.5a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-177a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v177z"/>
+                                <path fill="#8ec5ce" class="soundWave" d="M259.41 383.08a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-270a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v270z"/>
+                                <path fill="#a3d5e0" class="soundWave" d="M290.41 321.08a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-146a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v146zm31-31a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-84a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v84z"/>
+                                <path fill="#b5e3ea" class="soundWaveAlt" d="M352.41 305.58a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-115a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v115zm31-31.01a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-53a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v53z"/>
+                                <path fill="#dff2f4" class="soundWaveAlt" d="M445.41 251.26a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-6.5a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v6.5zm-31 7.82a6 6 0 0 1-6 6h-10.66a6 6 0 0 1-6-6v-22a6 6 0 0 1 6-6h10.66a6 6 0 0 1 6 6v22z"/>
+                              </svg>
+                        </div>
+                    </div>
+                    
+                <div class="nav__menu">
+                    <ul class="nav__list">
+                        <li>
+                            <a href="#home" class="nav__link active-link"><i class="bx bx-home-alt"></i></a>
+                        </li>
+                        <li class="nav__list">
+                            <a href="#about" class="nav__link"><i class="bx bx-user"></i></a>
+                        </li>
+                        <ul class="nav__list">
+                            <a href="#skills" class="nav__link"><i class="bx bx-book"></i></a>
+                        </li>
+                        <li class="nav__list">
+                            <a href="#work" class="nav__link"><i class="bx bx-briefcase-alt"></i></a>
+                        </li>
+                        <li class="nav__list">
+                            <a href="#contact" class="nav__link"><i class="bx bx-message-square-detail"></i></a>
+                        </li>
+                    <ul>
+                </div>
+                <!--Theme change button*/-->
+                <i class="bx bx-moon change-theme" id="theme-button"></i>
+            </nav>
+            
+            <div class="musicBar"></div> 
+            
+
+        </header>
+        <script src="./assets/js/getlocalstoragetheme.js"></script>
+
+        <!--=============== MAIN ===============-->
+        <main class="main">
+            <!--=============== HOME ===============-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <div class="home__data">
+                        <span class="home__greeting">Hello I'm</span>
+                        <h1 class="home__name" id="Nihat">Nihat Aliyev</h1>
+                        <h3 class="home__education">Frontend Developer</h3>
+
+                        <div class="home__buttons">
+                            <a class="button button--ghost" id="download">
+                                CV İndir
+                            </a>
+                            <a href="#about" class="button">Hakkımda</a>
+                        </div>
+                    </div>
+                    
+                    <div class="home__handle">
+                        <div class="music-player-element ">
+                            <div class="music-name"></div>
+                        </div>
+                        
+                        <svg xmlns="http://www.w3.org/2000/svg" class="home__img" version="1.0" viewBox="0 0 433 577">
+                            <path class="ben" d="M240.5 36c-16.8 1-27.5 4.1-32.4 9.1-6.7 6.8-12.6 14.1-15.8 19.4l-3.2 5.4-.2 18.8c-.1 18.3-.1 19.1 2.9 29.5 4 13.7 7.2 28.2 7.2 32.8 0 9.2-8.9 25.8-14.5 27.1-4.5 1.1-15.1 5.3-22.5 9-3.6 1.7-12.8 6-20.5 9.6-15.6 7-30.9 16.8-34.3 21.7-2.8 4.1-6.4 14.5-10.8 31.6-5.7 21.7-7.1 26.5-8.9 30-2 3.8-1.4 4.6 4 5.8l4 .8-.3 13.9c-.6 33.2-1.2 39.3-4.7 50.5-2.9 9.2-3.3 12.4-3.9 25.5-.7 16.8.8 61.8 2.4 71 1.2 7 3.8 32.2 4.7 44.5.5 7.2.2 9.4-1.5 13.5-2.6 6.6-8.2 24.8-8.2 27 0 .9.9 2.9 2 4.5 1.1 1.5 3.7 6.4 5.9 10.9 5.5 11.4 5.5 11.4 11.6 10.7l5.1-.6v9.5l-.1 9.5h40.8c32.1 0 40.7-.3 40.7-1.3 0-.7 1.3-3.9 2.9-7.2 1.5-3.3 3.9-8.6 5.1-11.8 1.3-3.1 2.7-5.7 3.1-5.7.3 0 .9 3.5 1.2 7.7.4 4.3.9 10.2 1.3 13l.7 5.3h92.6l3.5-4.6c1.9-2.5 4.2-6.9 5.1-9.7.9-2.9 2.3-6.6 3.1-8.4 1.5-3.4 1.9-10.9.6-11.7-.5-.3-.8-5.2-.6-10.8.3-9.4.2-9.8-.7-4.8-2.1 11.3-2.9 11.9-2.4 1.7.5-10 1-12.1 2.4-11.2 1.1.6 2.5-10.1 2.6-19 0-3.9.6-8.3 1.3-10 .7-1.6 1.1-4 .7-5.2-.3-1.3-.1-2.3.4-2.3.6 0 1.3-1.7 1.7-3.8.3-2 1.5-7.1 2.5-11.2s2-9.1 2.1-11c.1-1.9.4-3.9.7-4.5.6-1.1.6-1.5 1.6-11 .4-3.9 1.1-10.8 1.6-15.5 3.3-29.1 4.1-53.4 2.1-62-.6-2.5-1-10.2-.9-17.2.1-6.9-.1-12.4-.5-12.1-.5.2-.3-.8.2-2.2.6-1.5.7-3.1.4-3.7-.4-.6-.6-3.1-.6-5.7.1-5.4 2.9-8.3 9.8-10 2.4-.6 4.5-1.4 4.8-1.9 1.1-1.8-4.9-37.3-9.9-58.9-4.6-19.5-7.8-23.5-31.2-39.5-9.2-6.3-18.6-13.2-20.8-15.4-7.3-7.1-13.5-12.2-15.5-12.7-2.1-.5-2.7.7-1 1.8.6.3 1 1.1 1 1.8 0 .6-1.6-.5-3.6-2.4l-3.6-3.4.7 3.5c.3 1.9.2 4.5-.2 5.8-.9 2.3-.9 2.3-3.1.4-1.2-1.1-2.2-2.3-2.2-2.8s-.9-1.8-2.1-2.8c-1.7-1.4-2-2.4-1.5-5.2.7-3.3.1-4-2.9-3.4-.5.1-3.1.3-5.7.4-4.7.3-5.8-.5-4-2.9.9-1.4 9-5.3 12.4-6.1a8 8 0 0 0 3.9-2c.8-1 2.8-1.2 8.3-.8 6.3.6 7.3.4 8.9-1.4 1.8-2 1.5-7.2-.4-7.2s-.8-4 1.6-5.6c3.4-2.2 5-5.3 3.6-6.7-1.4-1.4-1.4-5.7 0-5.7.6 0 .9.7.5 1.5-.3.9 0 1.5.9 1.5.8 0 1.5.8 1.6 1.7.2 4.4 2.8-4.7 2.9-10 0-5.2.2-5.8 2.5-6.7 1.4-.5 2.6-1.5 2.6-2.2.5-4.8-.7-11.1-3.4-16.8-1.6-3.6-3.4-8.7-3.8-11.4-.5-3.1-1.8-5.9-3.4-7.6-2.4-2.5-3.6-7.8-1.4-6.5.6.4 1.3-.2 1.6-1.4.3-1.2.9-2.1 1.4-2.1.5 0 .6-.7.2-1.6-.5-1.5-.1-1.6 3.3-1 5 1 6.2 2 7 6.3l.7 3.6 1.2-3.1c.7-1.6 2.2-3.3 3.2-3.6 4-1.3 5.4-9.5 3.2-19.8-.9-4.3-2-6.1-5.8-9.6-2.5-2.4-6.4-5.3-8.6-6.4-3.7-2-24.7-8-26.3-7.6-.4.1-5.2.4-10.7.8zm-24.6 165.7c-1 4.1-2.1 7.8-2.5 8.2-1 .9.5-11.3 1.8-15 2-5.8 2.5-.9.7 6.8zm-79 119.8c1.8 14.6 1.4 23.8-1.7 34-2.2 7.6-2.7 11-2.7 21.5 0 6.9-.6 14.4-1.3 16.7-.7 2.3-1 5.3-.6 6.6.3 1.5-.2 3.9-1.4 6.3-1.1 2.2-2.4 6.7-2.9 10.2-.9 5.5-.7 6.8.9 9.9 1.7 3.1 1.8 4.2.9 7.9-.6 2.3-.8 5.6-.5 7.3.5 2.1 0 4-1.5 6.5-1.7 2.7-2.2 4.9-2.1 9.8.3 11.3-3.8 39.8-5.7 39.8-1.9 0-3.5-10.3-3.6-24.3-.1-14.8 1.2-25.5 5.3-43.2 3.7-16.2 4.7-23.4 6-41 .5-8.3 1.4-18.6 2-23 .6-4.4 1.9-18.2 3-30.7 2.6-29.8 3.6-32.2 5.9-14.3zM289.6 365c-.3 24.5-.5 44.7-.5 45-.1.3-1.9-1.5-4.2-3.9-3.1-3.2-3.9-4.8-3.5-6.4 1.8-6.2 1.7-7.7-.9-13.8-3.7-8.6-4-11.2-2.2-16.2.8-2.3 1.7-8.5 2-13.7.4-7 1.3-11.9 3.6-18.7 1.7-5.1 3.1-10.8 3.1-12.6 0-1.9.3-5 .7-6.8l.7-3.4.8 3c.4 1.6.6 23 .4 47.5zm-.6 53.4c0 1.4-.4 2.8-1 3.1-.6.4-1-.7-1-2.4s.5-3.1 1-3.1c.6 0 1 1.1 1 2.4zm-1.7 129c1.1 2.7 1.9 10.6 1.3 12.2-.5 1.3-.9 1.4-2 .5-1-.8-1.6-.9-2.1-.1-1.3 2.1-2.5 1-1.3-1.3.6-1.2 1.3-3.1 1.5-4.1.2-1.1.8-2.5 1.4-3.2.7-.8.7-1.4-.1-1.9-1.2-.8-1.3-3.5-.1-3.5.5 0 1.1.6 1.4 1.4zm-5.8 21.5c-.3 1.2-1.5 2.1-2.6 2.1-2.3 0-2.4-.5-.1-3.5 1.9-2.7 3.7-1.8 2.7 1.4zm5.9-.1c-.8 2.8-4.4 3-4.4.2 0-2 3-4.3 4.2-3.2.4.4.5 1.7.2 3z" class="home__img"/>
+                            <path class="ben" d="M277.2 79c0 1.4.2 1.9.5 1.2.2-.6.2-1.8 0-2.5-.3-.6-.5-.1-.5 1.3zm.8 6.5c.7.9 1.5 1.3 1.7 1.1.7-.7-.7-2.6-1.9-2.6-.6 0-.6.6.2 1.5zm-1 6.9c0 1.4 7.7 6.2 8.6 5.4.2-.2 0-1.7-.4-3.4-.7-2.5-1.4-2.9-4.5-3.2-2.8-.2-3.7.1-3.7 1.2zm.3 6.2c-.6 1.6 2.2 6.4 3.7 6.4 1.2 0 2.4-4.5 1.6-5.8-1-1.7-4.7-2.1-5.3-.6z"/>
+                          </svg>
+
+                    </div>
+
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/nihatxp" class="home__social-link" target="_blank">
+                            <i class="bx bxl-linkedin-square"></i>
+                        </a>
+                        <a href="https://github.com/nihatxp" class="home__social-link" target="_blank">
+                            <i class="bx bxl-github"></i>
+                        </a>
+                        <a href="https://instagram.com/nihatxp" class="home__social-link" target="_blank">
+                            <i class="bx bxl-instagram"></i>
+                        </a>
+                    </div>
+                    <i class="home__scroll" onclick="">
+                        <i class="bx bx-mouse home__scroll-icon"></i>
+                        <span class="home__scroll-name">Aşağı Kaydır</span>
+                    </i>
+                </div>
+            </section>
+            
+            <!--=============== ABOUT ===============-->
+            <section class="about section" id="about">
+                <span class="section__subtitle">Benim</span>
+                <h2 class="section__title">Hakkımda</h2>
+
+                <div class="about__container container grid">
+                    <img src="https://avatars.githubusercontent.com/u/87497469" alt="Nihat" class="about__img" oncontextmenu="return false;">
+                    <div class="about__data">
+                        <div class="about__info">
+
+                            <div class="about__box">
+                                <i class="bx bx-award hakkimda-icon"></i>
+                                <h3 class="about__title">Deneyim</h3>
+                                <span class="about__subtitle">5 Yıl</span>
+                            </div>
+
+                            <div class="about__box">
+                                <i class="bx bx-briefcase-alt hakkimda-icon"></i>
+                                <h3 class="about__title">Tamamlanan</h3>
+                                <a class="about__subtitle" href="#work">4 Proje</a>
+                            </div>
+
+                            <div class="about__box">
+                                <i class="bx bx-support hakkimda-icon"></i>
+                                <h3 class="about__title">Iletisim</h3>
+                                <a class="about__subtitle" href="#contact">Git ⇩</a>
+                            </div>
+                        </div>
+                        <p class="about__description">
+                            Bir yazılımcının çok daha ötesinde.
+                        </p>
+                        
+                        <a href="#contact" class="button">İletişime Geç</a>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== SKILLS ===============-->
+            <section class="skills section" id="skills">
+                <span class="section__subtitle">Deneyim</span>
+                <h2 class="section__title">Becerilerim</h2>
+
+
+                <div class="skills__container container grid">
+                    <div class="skills__content">
+                        <h3 class="skills__title">Frontend Geliştirme</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">HTML</h3>
+                                            <span class="skills__level">İyi</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">CSS</h3>
+                                            <span class="skills__level">İyi</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Sass</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Stylus</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="skills__content">
+                        <h3 class="skills__title">Backend Geliştirme</h3>
+                        <div class="skills__box">
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">PHP</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Python</h3>
+                                            <span class="skills__level">İyi</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Node JS</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Firebase</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                                
+                            </div>
+
+                            <div class="skills__group">
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">Javascript</h3>
+                                            <span class="skills__level">Orta</span>
+                                    </div>
+                                </div>
+                                <div class="skills__data">
+                                    <i class="bx bxs-badge-check"></i>
+                                    <div>
+                                        <h3 class="skills__name">GoLang</h3>
+                                            <span class="skills__level">Temel</span>
+                                    </div>
+                                </div>
+                                
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== SERVICES ===============-->
+            <section class="services section">
+                <span class="section__subtitle">İlgi alanım</span>
+                <h2 class="section__title">Ne Sunuyorum</h2>
+
+                <div class="services__container container grid">
+                    <div class="services__card">
+                        <h3 class="services__title">Masaüstü Programlama</h3>
+                        <span class="services__button">
+                            Daha Fazla <i class="bx bx-right-arrow-alt services__icon"></i>
+                        </span>
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <i class="bx bx-x services__modal-close"></i>
+                                <h3 class="services__modal-title">Masaüstü Programlama</h3>
+                                <p class="services__modal-description">
+                                    Masaüstü Programlama
+                                </p>
+
+                                <ul class="services__modal-list">
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="services__card">
+                        <h3 class="services__title">Android <br/> Programlama</h3>
+                        <span class="services__button">
+                            Daha Fazla <i class="bx bx-right-arrow-alt services__icon"></i>
+                        </span>
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <i class="bx bx-x services__modal-close"></i>
+                                <h3 class="services__modal-title">Android Programlama</h3>
+                                <p class="services__modal-description">
+                                    Android
+                                </p>
+
+                                <ul class="services__modal-list">
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="services__card">
+                        <h3 class="services__title">Web <br/> Geliştirme</h3>
+                        <span class="services__button">
+                            Daha Fazla <i class="bx bx-right-arrow-alt services__icon"></i>
+                        </span>
+                        <div class="services__modal">
+                            <div class="services__modal-content">
+                                <i class="bx bx-x services__modal-close"></i>
+                                <h3 class="services__modal-title">Web Geliştirme</h3>
+                                <p class="services__modal-description">
+                                    Web                                </p>
+
+                                <ul class="services__modal-list">
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                    <li class="services__modal-item">
+                                        <i class="bx bx-check services__modal-icon"></i>
+                                        <p class="services__modal-info"></p>
+                                    </li>
+
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!--=============== WORK ===============-->
+            <section class="work section" id="work">
+                <span class="section__subtitle">Tamamlanan</span>
+                <h2 class="section__title">Projelerim</h2>
+
+                <div class="work__filters">
+                    <span class="work__item active-work" data-filter="all" >Tümü</span>
+                    <span class="work__item" data-filter=".web">Web</span>
+                    <span class="work__item" data-filter=".mobil">Mobile</span>
+                    <span class="work__item" data-filter=".design">Diğer</span>
+                </div>
+                <!--
+                <div class="work__filters">
+                    <span class="work__item-right active-work" data-sort="default:asc">Asc</span>
+                    <span class="work__item-right" data-sort="default:desc">Desc</span>
+                </div>
+                -->
+                <div class="work__container container grid">
+                    <div class="work__card mix web">
+                        <img src="https://repository-images.githubusercontent.com/526152555/f00cca4a-9997-4a29-bbc6-b8c162f7ab0a" alt="" class="work__img">
+                        <h3 class="work__title">Web Design</h3>
+                        <a href="https://nihatxp.github.io/Web-Projects" target="_blank" class="work__button">
+                            Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </a>
+                    </div>
+
+                    <div class="work__card mix mobil">
+                        <img src="https://repository-images.githubusercontent.com/526722560/af4717ab-b52c-42dc-88f0-e52975f6b493" alt="" class="work__img">
+                        <h3 class="work__title">App Design</h3>
+                        <a href="https://nihatxp.github.io/links/" class="work__button">
+                            Demo <i class="bx bx-right-arrow-alt work__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <!--=============== CONTACT ===============-->
+            <section class="contact section" id="contact">
+                <span class="section__subtitle">Benimle</span>
+                <h2 class="section__title">İletişime geç</h2>
+
+                <div class="contact__container container grid">
+                    <div class="contact__content">
+                        <h3 class="contact__title">İletişim</h3>
+                        <div class="contact__info">
+                            <div class="contact__card">
+                                <i class="bx bx-mail-send contact__card-icon"></i>
+                                <h3 class="contact__card-title">Email</h3>
+                                <span class="contact__card-data" oncopy="copy(event)">nihatlyv@gmail.com</span>
+                                <a href="mailto:nihatlyv@gmail.com" target="_blank" class="contact__button">
+                                    Bağlantıya Git <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                </a>
+                            </div>
+
+                            <div class="contact__card">
+                                <i class="bx bxl-github contact__card-icon"></i>
+                                <h3 class="contact__card-title">Github</h3>
+                                <span class="contact__card-data" oncopy="copy(event)" >Nihat Aliyev(nihatxp)</span>
+
+                                <a href="https://github.com/nihatxp" target="_blank" class="contact__button">
+                                    Bağlantıya Git <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+
+                                </a>
+                            </div>
+
+                            <div class="contact__card">
+                                <i class="bx bxl-instagram contact__card-icon"></i>
+                                <h3 class="contact__card-title">Instagram</h3>
+                                <span class="contact__card-data" oncopy="copy(event)">nihatxp</span>
+
+                                <a href="https://instagram.com/nihatxp" target="_blank" class="contact__button">
+                                    Bağlantıya Git <i class="bx bx-right-arrow-alt contact__button-icon"></i>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--=============== FOOTER ===============-->
+        <footer class="footer">
+            <div class="footer__container container">
+                <h1 class="footer__title">Nihat</h1>
+                <ul class="footer__list">
+                    <li>
+                        <a href="#home" class="footer__link">Ana Sayfa</a>
+                    </li>
+                    <li>
+                        <a href="#about" class="footer__link">Hakkımda</a>
+                    </li>
+                    <li>
+                        <a href="#work" class="footer__link">Projeler</a>
+                    </li>
+                </ul>
+                <ul class="footer__social">
+                    <a href="https://www.facebook.com/nihatxp/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-facebook"></i>
+                    </a>
+                    <a href="https://instagram.com/nihatxp/" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-instagram"></i>
+                    </a>
+                    <a href="https://twitter.com/xpnihat" target="_blank" class="footer__social-link">
+                        <i class="bx bxl-twitter"></i>
+                    </a>
+                </ul>
+                <span class="footer__copy">
+                    &#169; Nihatxp.
+                </span>
+            </div>
+
+        </footer>
+
+    </body>
+        <!-- Link to page
+            ================================================== -->
+        
+          <a href="https://themeforest.net/user/ig_design/portfolio"      class="link-to-portfolio hover-link" target=”_blank”       ></a>
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src="./assets/js/scrollreveal.min.js"></script>
+
+        <!--=============== SWIPER JS ===============-->
+        <script src="./assets/js/swiper-bundle.min.js"></script>
+
+        <!--=============== MIXITUP FILTER ===============-->
+        <script src="./assets/js/mixitup.min.js"></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="./assets/js/main.js"></script>
+        <!--=============== Jquery JS ===============-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    </body>
+</html>
