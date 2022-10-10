@@ -386,8 +386,7 @@ document.getElementById('download').addEventListener("click", () =>{
   }
 
 
-  function downloadCV(){    
-    alert(1)
+  function downloadCV(){
     var filename='Nihat-Aliyev-CV.pdf';
     var link = document.createElement("a");
     link.download = filename;  
