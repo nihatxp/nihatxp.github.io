@@ -1,5 +1,5 @@
 # <h1 align=center> Adobe Photoshop 2023 - Full Feature Set Оperational!
-![video-thumb-Urban-Art](https://cdn.mos.cms.futurecdn.net/gyNFkPcDEEGVPTALdDaPbC.jpg)
+![video-thumb-Urban-Art](https://cdn.mos.cms.futurecdn.net/GVd3nH3223KttGkwHS9bAD.png)
 
 # <h1 align=center>☁️ Download
 | Mod Version| Adobe Photoshop - Version | Link |
